@@ -1,0 +1,42 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'ImmoSite &raquo; Upload photo' %}
+
+
+{# overwrite the pageContent block #}
+{% block pageContent %}
+
+    <section class="breadcrumb">
+        <p>
+            <a href="{{ path('home') }}">Home</a> &raquo; <a href="{{ path('immo.browse') }}">Browse</a> &raquo; <a
+                    href="{{ path('immo.browse') }}{{ immo.real_estate_id }}">Detail</a> &raquo; Upload a photo
+        </p>
+    </section>
+
+    <section class="content">
+        <h2>Upload logo</h2>
+
+        <form action="/ImmoSite/web/immo/browse/{{ immo.real_estate_id }}/upload" method="post" {{ form_enctype(uploadform) }} novalidate="novalidate">{# disable HTML5 formchecking #}
+            <dd>Here you can upload a photo for the property at &quot;{{ immo.address_streetnr }}, {{ immo.address_postcode }} {{ immo.address_city }} in {{ immo.country_name }}&quot;.</dd>
+            <dl class="clearfix dl-horizontal">
+                <dt>
+                    {{ form_label(uploadform.photo) }}
+                </dt>
+                <dd>
+                    {{ form_widget(uploadform.photo) }}
+                    {{ form_errors(uploadform.photo) }}
+                </dd>
+                <dt>
+                    &nbsp;
+                </dt>
+                <dd>
+                    {{ form_widget(uploadform._token) }}
+                    <input class="btn btn-primary" type="submit" name="submit" value="Upload Photo" />
+                </dd>
+            </dl>
+        </form>
+    </section>
+{% endblock %}

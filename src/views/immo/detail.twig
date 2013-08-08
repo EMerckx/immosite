@@ -1,0 +1,205 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'ImmoSite &raquo; Detail' %}
+
+
+{# overwrite the pageContent block #}
+{% block pageContent %}
+
+    <section class="breadcrumb">
+        <p><a href="{{ path('home') }}">Home</a> &raquo; <a href="{{ path('immo.browse') }}">Browse</a> &raquo;View
+            detail</p>
+    </section>
+
+    <section class="content">
+        {% if immo %}
+            <div class="page-header">
+                <h2>Detail page</h2>
+            </div>
+
+            <a href="{{ path('immo.browse') }}{{ immo.real_estate_id }}/edit"><input type="submit"
+                                                                                     class="btn btn-primary"
+                                                                                     name="edit"
+                                                                                     value="Edit"/></a>
+            <a href="{{ path('immo.browse') }}{{ immo.real_estate_id }}/upload"><input type="submit"
+                                                                                       class="btn btn-primary"
+                                                                                       name="upload"
+                                                                                       value="Upload photo"/></a>
+            <a href="{{ path('immo.browse') }}{{ immo.real_estate_id }}/delete"><input type="submit"
+                                                                                       class="btn"
+                                                                                       name="delete"
+                                                                                       value="Delete"/></a>
+
+            <div class="page-header" id="sub-header">
+                <h4>
+                    <small>by</small> {{ company.company_name }}
+                </h4>
+            </div>
+
+            <section>
+                <dl class="dl-horizontal">
+                    <dt>
+                        <label>Telephone number</label>
+                    </dt>
+                    <dd>
+                        {{ company.contact_tel }}
+                    </dd>
+                    <dt>
+                        <label>Company address</label>
+                    </dt>
+                    <dd>
+                        <address>
+                            {{ company.address_streetnr }}<br>
+                            {{ company.address_postcode }}, {{ company.address_city }}<br>
+                            {{ company.country_name }}
+                        </address>
+                    </dd>
+                    <dt>
+                        <label>Logo</label>
+                    </dt>
+                    {% for logo in logos %}
+                        <dd>
+                            <a href="{{ app.request.baseUrl }}{{ logo.url }}" class="highslide"
+                               onclick="return hs.expand(this)">
+                                <img src="{{ app.request.baseUrl }}{{ logo.url }}"
+                                     alt="{{ company.company_name }}" title="{{ company.company_name }}" width="150"/>
+                            </a>
+
+                        </dd>
+                    {% endfor %}
+                </dl>
+            </section>
+
+            <div class="page-header" id="sub-header">
+                <h4>
+                    Basic information
+                </h4>
+            </div>
+
+            <section>
+                <dl class="dl-horizontal">
+                    <dt>
+                        <label>Type</label>
+                    </dt>
+                    <dd>
+                        {% if immo.type == 'S' %}
+                            For sale
+                        {% else %}
+                            For rent
+                        {% endif %}
+                    </dd>
+                    <dt>
+                        <label>Price</label>
+                    </dt>
+                    <dd>
+                        € {{ immo.price }}
+                    </dd>
+                    <dt>
+                        <label>Category</label>
+                    </dt>
+                    <dd>
+                        {{ immo.category_name }}
+                    </dd>
+                    <dt>
+                        <label>Address</label>
+                    </dt>
+                    <dd>
+                        <address>
+                            {{ immo.address_streetnr }}<br>
+                            {{ immo.address_postcode }}, {{ immo.address_city }}<br>
+                            {{ immo.country_name }}
+                        </address>
+                    </dd>
+                </dl>
+            </section>
+
+            <div class="page-header" id="sub-header">
+                <h4>
+                    Extra information
+                </h4>
+            </div>
+
+            <section>
+                <dl class="dl-horizontal">
+                    <dt>
+                        <label>Amount of bedrooms</label>
+                    </dt>
+                    <dd>
+                        {% if immo.bedrooms %}
+                            {{ immo.bedrooms }}
+                        {% else %}
+                            &nbsp;
+                        {% endif %}
+                    </dd>
+                    <dt>
+                        <label>Area</label>
+                    </dt>
+                    <dd>
+                        {% if immo.area %}
+                            {{ immo.area }} m²
+                        {% else %}
+                            &nbsp;
+                        {% endif %}
+                    </dd>
+                    <dt>
+                        <label>K.I.</label>
+                    </dt>
+                    <dd>
+                        {% if immo.ki %}
+                            € {{ immo.ki }}
+                        {% else %}
+                            &nbsp;
+                        {% endif %}
+                    </dd>
+                    <dt>
+                        <label>Visibility</label>
+                    </dt>
+                    <dd>
+                        {% if immo.visible == 'Y' %}
+                            Visible
+                        {% else %}
+                            Invisible
+                        {% endif %}
+                    </dd>
+                </dl>
+            </section>
+
+            <div class="page-header" id="sub-header">
+                <h4>
+                    Description
+                </h4>
+            </div>
+
+            <section>
+                {% if immo.description %}
+                    {{ immo.description|raw }}
+                {% else %}
+                    &nbsp;
+                {% endif %}
+            </section>
+
+            <div class="page-header" id="sub-header">
+                <h4>
+                    Photos
+                </h4>
+            </div>
+
+            <section>
+                <ul class="thumbnails">
+                    {% for photo in photos %}
+                        <li>
+                            <a href="{{ app.request.baseUrl }}{{ photo.url }}" class="highslide"
+                               onclick="return hs.expand(this)">
+                                <img src="{{ app.request.baseUrl }}{{ photo.url }}"
+                                     alt="{{ photo.title }}" title="{{ photo.title }}" width="200"/>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+        {% endif %}
+    </section>
+{% endblock %}

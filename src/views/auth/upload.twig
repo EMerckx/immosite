@@ -1,0 +1,39 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'ImmoSite &raquo; Upload logo' %}
+
+
+{# overwrite the pageContent block #}
+{% block pageContent %}
+
+    <section class="breadcrumb">
+        <p><a href="{{ path('immo.browse') }}">Home</a> &raquo; <a href="{{ path('auth.profile') }}">Profile</a> &raquo; Upload logo</p>
+    </section>
+
+    <section class="content">
+        <h2>Upload logo</h2>
+
+        <form action="{{ path('auth.upload') }}" method="post" {{ form_enctype(uploadform) }} novalidate="novalidate">{# disable HTML5 formchecking #}
+
+            <dl class="clearfix dl-horizontal">
+                <dt>
+                    {{ form_label(uploadform.logo) }}
+                </dt>
+                <dd>
+                    {{ form_widget(uploadform.logo) }}
+                    {{ form_errors(uploadform.logo) }}
+                </dd>
+                <dt>
+                    &nbsp;
+                </dt>
+                <dd>
+                    {{ form_widget(uploadform._token) }}
+                    <input type="submit" class="btn btn-primary" name="submit" value="Upload Photo" />
+                </dd>
+            </dl>
+        </form>
+    </section>
+{% endblock %}

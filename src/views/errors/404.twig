@@ -1,0 +1,21 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'ImmoSite &raquo; 404 - File Not Found' %}
+
+
+{# overwrite the pageContent block #}
+{% block pageContent %}
+
+    <section class="breadcrumb">
+        <p><a href="{{ path('immo.browse') }}">Home</a> &raquo; 404 - File Not Found</p>
+    </section>
+
+    <section class="content">
+        <h2>Not found</h2>
+
+        <p>{{ error }}</p>
+    </section>
+{% endblock %}

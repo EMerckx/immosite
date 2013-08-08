@@ -1,0 +1,97 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'ImmoSite &raquo; Browse' %}
+
+
+{# overwrite the pageContent block #}
+{% block pageContent %}
+
+    <section class="breadcrumb">
+        <p><a href="{{ path('home') }}">Home</a> &raquo; Browse real properties</p>
+    </section>
+
+    <section class="content">
+        <div class="page-header">
+            <h2>Real properties</h2>
+        </div>
+        <section>
+            <a href="{{ path('immo.insert') }}"><input type="submit" name="add" class="btn btn-primary"
+                                                       value="Add new property"/></a>
+
+            {% if immos %}
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Bedrooms</th>
+                        <th>Area</th>
+                        <th>Address & number</th>
+                        <th>City</th>
+                        <th>Country</th>
+                        <th>Visible</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for immo in immos %}
+                        <tr>
+                            <td>
+                                <a href="{{ path('immo.browse') }}{{ immo.real_estate_id }}"><img
+                                            src="../../../web/img/Browse/view.gif" title="View detail" alt="detail"
+                                            height="16" width="16"></a>
+                                <a href="{{ path('immo.browse') }}{{ immo.real_estate_id }}/edit"><img
+                                            src="../../../web/img/Browse/edit_pencil.gif" title="Edit immo" alt="edit"
+                                            height="16" width="16"></a>
+                                <a href="{{ path('immo.browse') }}{{ immo.real_estate_id }}/delete"><img
+                                            src="../../../web/img/Browse/delete.gif" title="Delete immo" alt="delete"
+                                            height="16" width="16"></a>
+                            </td>
+                            <td>
+                                {% if immo.type == 'S' %}
+                                    Sale
+                                {% else %}
+                                    Rent
+                                {% endif %}
+                            </td>
+                            <td>€ {{ immo.price }}</td>
+                            <td>{{ immo.category_name }}</td>
+                            <td>{{ immo.bedrooms }}</td>
+                            <td>
+                                {% if immo.area %}
+                                    {{ immo.area }} m²
+                                {% else %}
+                                    &nbsp;
+                                {% endif %}
+                            </td>
+                            <td>{{ immo.address_streetnr }}</td>
+                            <td>{{ immo.address_city }}</td>
+                            <td>{{ immo.country_name }}</td>
+                            <td>{{ immo.visible }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+            {% else %}
+                <p>No real estates to show.</p>
+            {% endif %}
+        </section>
+
+        {% if pagination %}
+            <section class="pagination pagination-right">
+                <ul>
+                    {% for page in pagination %}
+                        <li><a href="{{ page.url }}">{{ page.pagenumber }}</a></li>
+                    {% endfor %}
+                </ul>
+            </section>
+        {% endif %}
+
+
+    </section>
+{% endblock %}

@@ -1,0 +1,132 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'ImmoSite &raquo; Register' %}
+
+
+{# overwrite the pageContent block #}
+{% block pageContent %}
+
+    <section class="breadcrumb">
+        <p><a href="{{ path('immo.browse') }}">Home</a> &raquo; Register</p>
+    </section>
+
+    <section class="content">
+        <h2>Register</h2>
+
+        <form class="clearfix" action="{{ path('auth.register') }}" method="post" {{ form_enctype(registerform) }}
+              novalidate="novalidate">{# disable HTML5 formchecking #}
+            <fieldset>
+                <legend>Company information</legend>
+                <dl class="dl-horizontal">
+                    <dt>
+                        {{ form_label(registerform.company_name) }}
+                    </dt>
+                    <dd>
+                        {{ form_widget(registerform.company_name) }}
+                        <span class="help-inline">*</span>
+                        <span class="text-error">{{ form_errors(registerform.company_name) }}</span>
+                    </dd>
+                    <dt>
+                        {{ form_label(registerform.description) }}
+                    </dt>
+                    <dd>
+                        {{ form_widget(registerform.description) }}
+                    </dd>
+                </dl>
+            </fieldset>
+            <fieldset>
+                <legend>User information</legend>
+                <dl class="dl-horizontal">
+                    <dt>
+                        {{ form_label(registerform.email) }}
+                    </dt>
+                    <dd>
+                        <div class="input-prepend">
+                            <span class="add-on"><i class="icon-envelope"></i></span>
+                            {{ form_widget(registerform.email) }}
+                        </div>
+                        <span class="help-inline">*</span>
+                        <span class="text-error">{{ form_errors(registerform.email) }}</span>
+
+                    </dd>
+                    <dt>
+                        {{ form_label(registerform.password) }}
+                    </dt>
+                    <dd>
+                        {{ form_widget(registerform.password) }}
+                        <span class="help-inline">*</span>
+                        <span class="text-error">{{ form_errors(registerform.password) }}</span>
+                    </dd>
+                    <dt>
+                        {{ form_label(registerform.confirm_password) }}
+                    </dt>
+                    <dd>
+                        {{ form_widget(registerform.confirm_password) }}
+                        <span class="help-inline">*</span>
+                        <span class="text-error">{{ form_errors(registerform.confirm_password) }}</span>
+                    </dd>
+                </dl>
+            </fieldset>
+            <fieldset>
+                <legend>Contact information</legend>
+                <dl class="dl-horizontal">
+                    <dt>
+                        {{ form_label(registerform.name) }}
+                    </dt>
+                    <dd>
+                        {{ form_widget(registerform.name) }}
+                        <span class="help-inline">*</span>
+                        <span class="text-error">{{ form_errors(registerform.name) }}</span>
+                    </dd>
+                    <dt>
+                        {{ form_label(registerform.telephone_number) }}
+                    </dt>
+                    <dd>
+                        {{ form_widget(registerform.telephone_number) }}
+                        <span class="help-inline">*</span>
+                        <span class="text-error">{{ form_errors(registerform.telephone_number) }}</span>
+                    </dd>
+                    <dt>
+                        {{ form_label(registerform.street_and_number) }}
+                    </dt>
+                    <dd>
+                        {{ form_widget(registerform.street_and_number) }}
+                    </dd>
+                    <dt>
+                        {{ form_label(registerform.postal_code) }}
+                    </dt>
+                    <dd>
+                        {{ form_widget(registerform.postal_code) }}
+                    </dd>
+                    <dt>
+                        {{ form_label(registerform.city) }}
+                    </dt>
+                    <dd>
+                        {{ form_widget(registerform.city) }}
+                    </dd>
+                    <dt>
+                        {{ form_label(registerform.country) }}
+                    </dt>
+                    <dd>
+                        {{ form_widget(registerform.country) }}
+                    </dd>
+                </dl>
+            </fieldset>
+            <dl class="dl-horizontal">
+                <dt>
+                    &nbsp;
+                </dt>
+                <dd>
+                    <small>All the fields with a * are required.</small>
+                </dd>
+                <dd>
+                    {{ form_widget(registerform._token) }}
+                    <input class="btn btn-primary" type="submit" name="submit" value="Register"/>
+                </dd>
+            </dl>
+        </form>
+    </section>
+{% endblock %}

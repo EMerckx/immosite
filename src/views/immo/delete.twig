@@ -1,0 +1,36 @@
+{# extend the parent tpl #}
+{% extends 'layout.twig' %}
+
+
+{# set the pagetitle in the parent tpl #}
+{% set pageTitle = 'ImmoSite &raquo; Delete property' %}
+
+
+{# overwrite the pageContent block #}
+{% block pageContent %}
+
+    <section class="breadcrumb">
+        <p>
+            <a href="{{ path('home') }}">Home</a> &raquo; <a href="{{ path('immo.browse') }}">Browse</a> &raquo; <a
+                    href="{{ path('immo.browse') }}{{ immo.real_estate_id }}">Detail</a> &raquo; Delete
+        </p>
+    </section>
+
+    <section class="content">
+    <div class="page-header">
+        <h2>Delete internship</h2>
+    </div>
+
+    {% if immo %}
+        <form class="clearfix" action="/ImmoSite/web/immo/browse/{{ immo.real_estate_id }}/delete/" method="post">
+            <dd>Are you sure you want to delete the property at &quot;{{ immo.address_streetnr }}, {{ immo.address_postcode }} {{ immo.address_city }} in {{ immo.country_name }}&quot;.</dd>
+            <dl>
+               <dd>
+                    <input class="btn btn-primary" type="submit" name="confirm" value="Ok"/>
+                </dd>
+            </dl>
+        </form>
+    {% else %}
+        <p>No internship with such id.</p>
+    {% endif %}
+{% endblock %}
