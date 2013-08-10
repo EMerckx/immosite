@@ -20,12 +20,16 @@
 
         {% if user %}
 
-            <a href="{{ path('auth.editprofile') }}"><input type="submit" class="btn btn-primary" name="edit"
-                                                            value="Edit"/></a>
-            <a href="{{ path('auth.upload') }}"><input type="submit" class="btn btn-primary" name="upload"
-                                                       value="Upload logo"/></a>
+            <section class="clearfix">
+                <form class="buttons" action="{{ path('auth.editprofile') }}" method="get">
+                    <input type="submit" class="btn btn-primary" name="edit" value="Edit"/>
+                </form>
+                <form class="buttons" action="{{ path('auth.upload') }}" method="get">
+                    <input type="submit" class="btn btn-primary" name="upload" value="Upload logo"/>
+                </form>
+            </section>
 
-            <div class="page-header" id="sub-header">
+            <div class="page-header sub-header">
                 <h4>
                     Company information
                 </h4>
@@ -61,7 +65,7 @@
                 </dl>
             </section>
 
-            <div class="page-header" id="sub-header">
+            <div class="page-header sub-header">
                 <h4>
                     Contact information
                 </h4>

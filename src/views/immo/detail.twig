@@ -20,21 +20,30 @@
                 <h2>Detail page</h2>
             </div>
 
-            <a href="{{ path('immo.browse') }}{{ immo.real_estate_id }}/edit"><input type="submit"
-                                                                                     class="btn btn-primary"
-                                                                                     name="edit"
-                                                                                     value="Edit"/></a>
-            <a href="{{ path('immo.browse') }}{{ immo.real_estate_id }}/upload"><input type="submit"
-                                                                                       class="btn btn-primary"
-                                                                                       name="upload"
-                                                                                       value="Upload photo"/></a>
-            <a href="{{ path('immo.browse') }}{{ immo.real_estate_id }}/delete"><input type="submit"
-                                                                                       class="btn"
-                                                                                       name="delete"
-                                                                                       value="Delete"/></a>
 
-            <div class="page-header" id="sub-header">
-                <h4>
+            <section class="clearfix">
+            <form class="buttons" action="{{ path('immo.browse') }}{{ immo.real_estate_id }}/edit" method="get">
+                <input type="submit"
+                       class="btn btn-primary"
+                       name="edit"
+                       value="Edit"/>
+            </form>
+            <form class="buttons" action="{{ path('immo.browse') }}{{ immo.real_estate_id }}/upload" method="get">
+                <input type="submit"
+                       class="btn btn-primary"
+                       name="upload"
+                       value="Upload photo"/>
+            </form>
+            <form class="buttons" action="{{ path('immo.browse') }}{{ immo.real_estate_id }}/delete" method="get">
+                <input type="submit"
+                       class="btn"
+                       name="delete"
+                       value="Delete"/>
+            </form>
+            </section>
+
+            <div>
+                <h4 class="page-header sub-header">
                     <small>by</small> {{ company.company_name }}
                 </h4>
             </div>
@@ -73,7 +82,7 @@
                 </dl>
             </section>
 
-            <div class="page-header" id="sub-header">
+            <div class="page-header sub-header">
                 <h4>
                     Basic information
                 </h4>
@@ -116,7 +125,7 @@
                 </dl>
             </section>
 
-            <div class="page-header" id="sub-header">
+            <div class="page-header sub-header">
                 <h4>
                     Extra information
                 </h4>
@@ -167,7 +176,7 @@
                 </dl>
             </section>
 
-            <div class="page-header" id="sub-header">
+            <div class="page-header sub-header">
                 <h4>
                     Description
                 </h4>
@@ -181,7 +190,7 @@
                 {% endif %}
             </section>
 
-            <div class="page-header" id="sub-header">
+            <div class="page-header sub-header">
                 <h4>
                     Photos
                 </h4>

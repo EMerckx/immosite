@@ -54,12 +54,13 @@
         <section id="login">
             {% if user == false %}
                 <dl id="logInLinks">
-
+                    <dt></dt>
                     <dd><a href="{{ path('auth.login') }}">Log in</a></dd>
                     <dd><a href="{{ path('auth.register') }}">Register</a></dd>
                 </dl>
             {% else %}
                 <dl id="loggedIn">
+                    <dt></dt>
                     <dd><a href="{{ path('auth.profile') }}">{{ user.name }}</a></dd>
                     <dd id="logout"><a href="{{ path('auth.logout') }}">Log out</a></dd>
                 </dl>

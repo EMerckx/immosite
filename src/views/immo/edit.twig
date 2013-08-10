@@ -17,124 +17,125 @@
     </section>
 
     <section class="content">
-    <div class="page-header">
-        <h2>Edit real property</h2>
-    </div>
+        <div class="page-header">
+            <h2>Edit real property</h2>
+        </div>
 
-    {% if immo %}
-        <form class="clearfix" action="/ImmoSite/web/immo/browse/{{ immo.real_estate_id }}/edit/" method="post" {{ form_enctype(insertform) }}
-              novalidate="novalidate">{# disable HTML5 formchecking #}
+        {% if immo %}
+            <form class="clearfix" action="/ImmoSite/web/immo/browse/{{ immo.real_estate_id }}/edit/"
+                  method="post" {{ form_enctype(insertform) }}
+                  novalidate="novalidate">{# disable HTML5 formchecking #}
 
-            <fieldset>
-                <legend>Basic information</legend>
-                <dl class="dl-horizontal">
-                    <dt>
-                        {{ form_label(insertform.type) }}
-                    </dt>
+                <fieldset>
+                    <legend>Basic information</legend>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            {{ form_label(insertform.type) }}
+                        </dt>
+                        <dd>
+                            {{ form_widget(insertform.type) }}
+                            <span class="help-inline">*</span>
+                            <span class="text-error">{{ form_errors(insertform.type) }}</span>
+                        </dd>
+                        <dt>
+                            {{ form_label(insertform.price) }}
+                        </dt>
+                        <dd>
+                            {{ form_widget(insertform.price) }}
+                            <span class="help-inline">* ( € )</span>
+                            <span class="text-error">{{ form_errors(insertform.price) }}</span>
+                        </dd>
+                        <dt>
+                            {{ form_label(insertform.category) }}
+                        </dt>
+                        <dd>
+                            {{ form_widget(insertform.category) }}
+                            <span class="help-inline">*</span>
+                            <span class="text-error">{{ form_errors(insertform.category) }}</span>
+                        </dd>
+                        <dt>
+                            {{ form_label(insertform.street_and_number) }}
+                        </dt>
+                        <dd>
+                            {{ form_widget(insertform.street_and_number) }}
+                            <span class="help-inline">*</span>
+                            <span class="text-error">{{ form_errors(insertform.street_and_number) }}</span>
+                        </dd>
+                        <dt>
+                            {{ form_label(insertform.postal_code) }}
+                        </dt>
+                        <dd>
+                            {{ form_widget(insertform.postal_code) }}
+                            <span class="help-inline">*</span>
+                            <span class="text-error">{{ form_errors(insertform.postal_code) }}</span>
+                        </dd>
+                        <dt>
+                            {{ form_label(insertform.city) }}
+                        </dt>
+                        <dd>
+                            {{ form_widget(insertform.city) }}
+                            <span class="help-inline">*</span>
+                            <span class="text-error">{{ form_errors(insertform.city) }}</span>
+                        </dd>
+                        <dt>
+                            {{ form_label(insertform.country) }}
+                        </dt>
+                        <dd>
+                            {{ form_widget(insertform.country) }}
+                            <span class="help-inline">*</span>
+                            <span class="text-error">{{ form_errors(insertform.country) }}</span>
+                        </dd>
+                    </dl>
+                </fieldset>
+                <fieldset>
+                    <legend>Extra information</legend>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            {{ form_label(insertform.amount_of_bedrooms) }}
+                        </dt>
+                        <dd>
+                            {{ form_widget(insertform.amount_of_bedrooms) }}
+                        </dd>
+                        <dt>
+                            {{ form_label(insertform.area) }}
+                        </dt>
+                        <dd>
+                            {{ form_widget(insertform.area) }}
+                            <span class="help-inline"> ( m² )</span>
+                        </dd>
+                        <dt>
+                            <label>K.I.</label>
+                        </dt>
+                        <dd>
+                            {{ form_widget(insertform.K_I) }}
+                            <span class="help-inline"> ( € )</span>
+                        </dd>
+                        <dt>
+                            {{ form_label(insertform.visibility) }}
+                        </dt>
+                        <dd>
+                            {{ form_widget(insertform.visibility) }}
+                            <span class="text-error">{{ form_errors(insertform.country) }}</span>
+                        </dd>
+                        <dt>
+                            {{ form_label(insertform.description) }}
+                        </dt>
+                        <dd>
+                            {{ form_widget(insertform.description) }}
+                        </dd>
+                    </dl>
+                </fieldset>
+                <dl>
+                    <dt></dt>
                     <dd>
-                        {{ form_widget(insertform.type) }}
-                        <span class="help-inline">*</span>
-                        <span class="text-error">{{ form_errors(insertform.type) }}</span>
-                    </dd>
-                    <dt>
-                        {{ form_label(insertform.price) }}
-                    </dt>
-                    <dd>
-                        {{ form_widget(insertform.price) }}
-                        <span class="help-inline">* ( € )</span>
-                        <span class="text-error">{{ form_errors(insertform.price) }}</span>
-                    </dd>
-                    <dt>
-                        {{ form_label(insertform.category) }}
-                    </dt>
-                    <dd>
-                        {{ form_widget(insertform.category) }}
-                        <span class="help-inline">*</span>
-                        <span class="text-error">{{ form_errors(insertform.category) }}</span>
-                    </dd>
-                    <dt>
-                        {{ form_label(insertform.street_and_number) }}
-                    </dt>
-                    <dd>
-                        {{ form_widget(insertform.street_and_number) }}
-                        <span class="help-inline">*</span>
-                        <span class="text-error">{{ form_errors(insertform.street_and_number) }}</span>
-                    </dd>
-                    <dt>
-                        {{ form_label(insertform.postal_code) }}
-                    </dt>
-                    <dd>
-                        {{ form_widget(insertform.postal_code) }}
-                        <span class="help-inline">*</span>
-                        <span class="text-error">{{ form_errors(insertform.postal_code) }}</span>
-                    </dd>
-                    <dt>
-                        {{ form_label(insertform.city) }}
-                    </dt>
-                    <dd>
-                        {{ form_widget(insertform.city) }}
-                        <span class="help-inline">*</span>
-                        <span class="text-error">{{ form_errors(insertform.city) }}</span>
-                    </dd>
-                    <dt>
-                        {{ form_label(insertform.country) }}
-                    </dt>
-                    <dd>
-                        {{ form_widget(insertform.country) }}
-                        <span class="help-inline">*</span>
-                        <span class="text-error">{{ form_errors(insertform.country) }}</span>
+                        {{ form_widget(insertform._token) }}
+                        <input class="btn btn-primary" type="submit" name="submit" value="Submit changes"/>
                     </dd>
                 </dl>
-            </fieldset>
-            <fieldset>
-                <legend>Extra information</legend>
-                <dl class="dl-horizontal">
-                    <dt>
-                        {{ form_label(insertform.amount_of_bedrooms) }}
-                    </dt>
-                    <dd>
-                        {{ form_widget(insertform.amount_of_bedrooms) }}
-                    </dd>
-                    <dt>
-                        {{ form_label(insertform.area) }}
-                    </dt>
-                    <dd>
-                        {{ form_widget(insertform.area) }}
-                        <span class="help-inline"> ( m² )</span>
-                    </dd>
-                    <dt>
-                        <label>K.I.</label>
-                    </dt>
-                    <dd>
-                        {{ form_widget(insertform.K_I) }}
-                        <span class="help-inline"> ( € )</span>
-                    </dd>
-                    <dt>
-                        {{ form_label(insertform.visibility) }}
-                    </dt>
-                    <dd>
-                        {{ form_widget(insertform.visibility) }}
-                        <span class="text-error">{{ form_errors(insertform.country) }}</span>
-                    </dd>
-                    <dt>
-                        {{ form_label(insertform.description) }}
-                    </dt>
-                    <dd>
-                        {{ form_widget(insertform.description) }}
-                    </dd>
-                </dl>
-            </fieldset>
-            <dl>
-
-                <dd>
-                    {{ form_widget(insertform._token) }}
-                    <input class="btn btn-primary" type="submit" name="submit" value="Submit changes"/>
-                </dd>
-            </dl>
-        </form>
-        {#<a href="{{ path('immo.browse') }}"><input class="cancelButton" type="submit" name="submit" value="Cancel"/></a>#}
-    {% else %}
-        <p>No internship with such id.</p>
-    {% endif %}
-
+            </form>
+            {#<a href="{{ path('immo.browse') }}"><input class="cancelButton" type="submit" name="submit" value="Cancel"/></a>#}
+        {% else %}
+            <p>No internship with such id.</p>
+        {% endif %}
+    </section>
 {% endblock %}

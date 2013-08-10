@@ -20,7 +20,7 @@
         <h2>Upload logo</h2>
 
         <form action="/ImmoSite/web/immo/browse/{{ immo.real_estate_id }}/upload" method="post" {{ form_enctype(uploadform) }} novalidate="novalidate">{# disable HTML5 formchecking #}
-            <dd>Here you can upload a photo for the property at &quot;{{ immo.address_streetnr }}, {{ immo.address_postcode }} {{ immo.address_city }} in {{ immo.country_name }}&quot;.</dd>
+            <p>Here you can upload a photo for the property at &quot;{{ immo.address_streetnr }}, {{ immo.address_postcode }} {{ immo.address_city }} in {{ immo.country_name }}&quot;.</p>
             <dl class="clearfix dl-horizontal">
                 <dt>
                     {{ form_label(uploadform.photo) }}

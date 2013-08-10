@@ -14,19 +14,19 @@
     <file path="/AuthRepository.php" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1375442090889" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1373839448993" ignored="false" />
     <file path="/InternRepository.php" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1373721962933" ignored="false" />
-    <file path="/layout.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1373722270566" ignored="false" />
+    <file path="/layout.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1376128217065" ignored="false" />
     <file path="/login.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1375441201315" ignored="false" />
     <file path="/ImmoRepository.php" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1375460372992" ignored="false" />
-    <file path="/browse.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1375459512201" ignored="false" />
-    <file path="/insert.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1375461540936" ignored="false" />
-    <file path="/edit.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1375440348725" ignored="false" />
-    <file path="/delete.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1374005512409" ignored="false" />
-    <file path="/detail.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1375458955338" ignored="false" />
-    <file path="/upload.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1374005467659" ignored="false" />
-    <file path="/profile.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1375439264196" ignored="false" />
+    <file path="/browse.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1376128479678" ignored="false" />
+    <file path="/insert.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1376128584845" ignored="false" />
+    <file path="/edit.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1376129423924" ignored="false" />
+    <file path="/delete.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1376129769475" ignored="false" />
+    <file path="/detail.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1376129357149" ignored="false" />
+    <file path="/upload.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1376129668539" ignored="false" />
+    <file path="/profile.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1376129938138" ignored="false" />
     <file path="/editprofile.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1373975959695" ignored="false" />
     <file path="/404.twig" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1373971503487" ignored="false" />
-    <file path="/screen.css" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1373996689586" ignored="false" />
+    <file path="/screen.css" changelist="1c433b2b-5ad6-4383-828e-d3b0cbb63c2e" time="1376129246941" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,19 +46,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="immocontroller.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ikdoeict/provider/controller/immocontroller.php">
+      <file leaf-file-name="layout.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/layout.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="102" selection-start="720" selection-end="731" vertical-scroll-proportion="0.0">
+            <state line="54" column="34" selection-start="2141" selection-end="2141" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authcontroller.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="authcontroller.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ikdoeict/provider/controller/authcontroller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="100" selection-start="6819" selection-end="6819" vertical-scroll-proportion="0.0">
+            <state line="19" column="0" selection-start="521" selection-end="521" vertical-scroll-proportion="0.020166073">
               <folding />
             </state>
           </provider>
@@ -67,16 +67,25 @@
       <file leaf-file-name="edit.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/immo/edit.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="65" selection-start="677" selection-end="703" vertical-scroll-proportion="0.0">
+            <state line="130" column="44" selection-start="5767" selection-end="5767" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insert.twig" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/immo/insert.twig">
+      <file leaf-file-name="upload.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/immo/upload.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="59" selection-start="588" selection-end="588" vertical-scroll-proportion="0.019859813">
+            <state line="22" column="186" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="delete.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/immo/delete.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="24" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -85,16 +94,7 @@
       <file leaf-file-name="ImmoRepository.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ikdoeict/repository/ImmoRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="33" selection-start="4344" selection-end="4344" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="browse.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/immo/browse.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="40" selection-start="2517" selection-end="2517" vertical-scroll-proportion="0.0">
+            <state line="58" column="5" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -103,7 +103,7 @@
       <file leaf-file-name="AuthRepository.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ikdoeict/repository/AuthRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="132" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
+            <state line="31" column="14" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,16 +112,7 @@
       <file leaf-file-name="detail.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/immo/detail.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="35" selection-start="3722" selection-end="3892" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/auth/login.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="50" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
+            <state line="25" column="16" selection-start="561" selection-end="717" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -130,7 +121,16 @@
       <file leaf-file-name="profile.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/auth/profile.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="50" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
+            <state line="67" column="36" selection-start="2277" selection-end="2277" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="screen.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/screen.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="248" column="24" selection-start="4117" selection-end="4117" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,20 +148,20 @@
       <list>
         <option value="$PROJECT_DIR$/src/views/auth/editprofile.twig" />
         <option value="$PROJECT_DIR$/src/views/auth/upload.twig" />
-        <option value="$PROJECT_DIR$/src/views/layout.twig" />
-        <option value="$PROJECT_DIR$/web/css/screen.css" />
-        <option value="$PROJECT_DIR$/src/views/immo/upload.twig" />
-        <option value="$PROJECT_DIR$/src/views/immo/delete.twig" />
-        <option value="$PROJECT_DIR$/src/views/auth/profile.twig" />
         <option value="$PROJECT_DIR$/src/views/auth/login.twig" />
         <option value="$PROJECT_DIR$/src/ikdoeict/provider/controller/authcontroller.php" />
         <option value="$PROJECT_DIR$/src/ikdoeict/repository/AuthRepository.php" />
-        <option value="$PROJECT_DIR$/src/views/immo/edit.twig" />
-        <option value="$PROJECT_DIR$/src/views/immo/detail.twig" />
-        <option value="$PROJECT_DIR$/src/views/immo/browse.twig" />
         <option value="$PROJECT_DIR$/src/ikdoeict/repository/ImmoRepository.php" />
         <option value="$PROJECT_DIR$/src/ikdoeict/provider/controller/immocontroller.php" />
+        <option value="$PROJECT_DIR$/src/views/layout.twig" />
+        <option value="$PROJECT_DIR$/src/views/immo/browse.twig" />
         <option value="$PROJECT_DIR$/src/views/immo/insert.twig" />
+        <option value="$PROJECT_DIR$/web/css/screen.css" />
+        <option value="$PROJECT_DIR$/src/views/immo/detail.twig" />
+        <option value="$PROJECT_DIR$/src/views/immo/edit.twig" />
+        <option value="$PROJECT_DIR$/src/views/immo/upload.twig" />
+        <option value="$PROJECT_DIR$/src/views/immo/delete.twig" />
+        <option value="$PROJECT_DIR$/src/views/auth/profile.twig" />
       </list>
     </option>
   </component>
@@ -497,10 +497,10 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.keymap" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../voorbereidingExamenWS1" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -545,13 +545,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29562435" sideWeight="0.67108166" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30683032" sideWeight="0.67108166" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -632,97 +632,97 @@
         <state line="16" column="54" selection-start="667" selection-end="686" vertical-scroll-proportion="-10.461538" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/layout.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="9" selection-start="1227" selection-end="1227" vertical-scroll-proportion="3.1153846" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/screen.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="215" column="13" selection-start="3601" selection-end="3601" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/immo/delete.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="45" selection-start="686" selection-end="686" vertical-scroll-proportion="-15.692307" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/immo/upload.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="62" selection-start="442" selection-end="442" vertical-scroll-proportion="-9.153846" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/auth/editprofile.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/auth/profile.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="50" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/auth/login.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="50" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="22" column="50" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ikdoeict/repository/AuthRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/ikdoeict/provider/controller/immocontroller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="132" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="35" column="9" selection-start="1362" selection-end="1521" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/immo/detail.twig">
+    <entry file="file://$PROJECT_DIR$/src/views/immo/insert.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="35" selection-start="3722" selection-end="3892" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ikdoeict/repository/ImmoRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="33" selection-start="4344" selection-end="4344" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="123" column="23" selection-start="5070" selection-end="5070" vertical-scroll-proportion="-80.42308" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/immo/browse.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="40" selection-start="2517" selection-end="2517" vertical-scroll-proportion="0.0">
+        <state line="20" column="66" selection-start="492" selection-end="546" vertical-scroll-proportion="-5.8846154" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/screen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="248" column="24" selection-start="4117" selection-end="4117" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/immo/delete.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="24" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/immo/edit.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="65" selection-start="677" selection-end="703" vertical-scroll-proportion="0.0">
+        <state line="130" column="44" selection-start="5767" selection-end="5767" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/layout.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="34" selection-start="2141" selection-end="2141" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/immo/upload.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="186" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/immo/detail.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="16" selection-start="561" selection-end="717" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/auth/profile.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="36" selection-start="2277" selection-end="2277" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ikdoeict/repository/AuthRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="14" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ikdoeict/repository/ImmoRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="5" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ikdoeict/provider/controller/authcontroller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="100" selection-start="6819" selection-end="6819" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ikdoeict/provider/controller/immocontroller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="102" selection-start="720" selection-end="731" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/immo/insert.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="59" selection-start="588" selection-end="588" vertical-scroll-proportion="0.019859813">
+        <state line="19" column="0" selection-start="521" selection-end="521" vertical-scroll-proportion="0.020166073">
           <folding />
         </state>
       </provider>

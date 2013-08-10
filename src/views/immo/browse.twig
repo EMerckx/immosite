@@ -18,8 +18,10 @@
             <h2>Real properties</h2>
         </div>
         <section>
-            <a href="{{ path('immo.insert') }}"><input type="submit" name="add" class="btn btn-primary"
-                                                       value="Add new property"/></a>
+            <form action="{{ path('immo.insert') }}" method="get">
+                <input type="submit" name="add" class="btn btn-primary"
+                       value="Add new property"/>
+            </form>
 
             {% if immos %}
                 <table class="table table-hover">
